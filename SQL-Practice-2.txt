@@ -1,0 +1,110 @@
+                                       SQL QUERIES ON FUNCTIONS 
+
+1.  List employees whose name having 4 characters?
+
+SELECT ENAME
+FROM EMP
+WHERE LENGTH(ENAME)=4;
+
+2.  List employees whose job is having 7 characters?
+
+SELECT JOB
+FROM EMP
+WHERE LENGTH(JOB)=7;
+
+3.Find out how many times letter 'S' occurs in 'PentagonSpace'?
+
+SELECT LENGTH('PENTAGONSPACE')-LENGTH(REPLACE('PENTAGONSPACE','S'))
+FROM DUAL;
+
+4. List the employees whose job is having last 3 characters as 'man'?
+
+SELECT *
+FROM EMP
+WHERE SUBSTR(JOB,-3)='MAN';
+
+5. List employees whose job is having the first 3 characters as 'man'?
+
+SELECT *
+FROM EMP
+WHERE SUBSTR(JOB,1,3) IN('MAN');
+
+6. Display all the names whose name is having exactly 1 'L'?
+
+SELECT ENAME
+FROM EMP
+WHERE INSTR(ENAME,'L',1,1)>0 AND INSTR(ENAME,'L',1,2)=0;
+
+7. Display dept names which are having letter 'O'?
+
+SELECT DNAME
+FROM DEPT
+WHERE INSTR(DNAME,'O',1)>0;
+
+8. Display the output as shown below, Scott working as a clerk earns 3000 in deptno 20?
+
+SELECT CONCAT(ENAME,CONCAT(' working as a ',CONCAT('cleark earns 3000 in deptno',DEPTNO)))
+FROM EMP
+WHERE ENAME='SCOTT';
+
+9. Calculate number of L in string 'HELLLLL'?
+
+SELECT LENGTH('HELLLLL')-LENGTH(REPLACE('HELLLLL','L'))
+FROM DUAL;
+
+10. Display all the employees whose job has a string 'MAN'?
+
+SELECT *
+FROM EMP
+WHERE INSTR(JOB,'MAN',1)>0;
+
+11. Display all the employees whose job starts with string 'MAN'?
+
+SELECT *
+FROM EMP
+WHERE SUBSTR(JOB,1,3)='MAN';
+
+12. Display all the employees whose job ends with string 'MAN'?
+
+SELECT *
+FROM EMP
+WHERE SUBSTR(JOB,-3)='MAN';
+
+13. Display the first 3 characters of ename in lower case and rest everything in upper case.
+If ename is 'PENTAGON' then display  this as ‘penTAGON’ ?
+
+SELECT CONCAT((LOWER(SUBSTR('PENTAGON','1','3'))),SUBSTR('PENTAGON',4))
+FROM DUAL;
+
+14. Display the result from the emp table as below.
+SMITH is a CLERK and gets salary 2000 
+Here SMITH is ename column, CLERK is JOB and 2000 is the SAL column and the rest everything is literal strings?
+
+SELECT ENAME,CONCAT(' is a ',CONCAT(JOB,CONCAT(' and gets salary ',2000)))
+FROM EMP
+WHERE ENAME='SMITH';
+
+15. list the employees hired on a Wednesday?
+
+SELECT *
+FROM EMP
+WHERE TO_CHAR(HIREDATE,'DAY')='WEDNESDAY';
+
+16. list the employees hired on a leap year?
+
+SELECT *
+FROM EMP
+WHERE (MOD(TO_CHAR(HIREDATE,'YYYY'),4)=0 OR
+              MOD(TO_CHAR(HIREDATE,'YYYY'),400)=0)AND
+              MOD(TO_CHAR(HIREDATE,'YYYY'),100)!=0;
+
+17. list the employees hired on a Sunday in the month of may?
+
+SELECT *
+FROM EMP
+WHERE TO_CHAR(HIREDATE,'DY')='SUN' AND TO_CHAR(HIREDATE,'MON')='MAY';
+
+
+
+
+
