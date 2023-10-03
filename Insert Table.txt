@@ -1,0 +1,16 @@
+INSERT TABLE:-
+	This statement is used to create or insert the values or records into the table
+
+SYNTAX:-
+	Direct insert values to all the columns in a table use this query 	syntax.
+		INSERT INTO TABLE-NAME VALUES(V1,V2,V3,V4);
+
+	Uniquely insert values to a particular columns in a table use this query syntax.
+		INSERT INTO TABLE-NAME(COLUMN-NAME) 					VALUES(V1,V2,V3);
+
+EXAMPLE:-
+
+	INSERT INTO CUSTOMER VALUES(1, 'SAM', 'CHENNAI', 	9840723547);
+
+	INSERT INTO CUSTOMER(CNAME,CLOC,CPHONE) 	VALUES('ALEX', 'CANADA', 7381205726);
+

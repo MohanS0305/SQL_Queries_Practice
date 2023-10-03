@@ -1,0 +1,10 @@
+TRUNCATE TABLE:-
+	TRUNCATE command is used to delete entire record or data from the table but the structure of the table not deleted and deleted record restore is not possible here.
+
+SYNTAX:-
+
+	TRUNCATE TABLE TABLE-NAME;
+
+EXAMPLE:-
+	
+	TRANCATE TABLE CUSTOMER;

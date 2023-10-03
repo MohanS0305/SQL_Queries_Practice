@@ -1,0 +1,8 @@
+RENAME :-
+	RENAME is used to rename the objects(Tables or database)
+
+SYNTAX :-
+	RENAME CURRENT-TABLE NAME TO NEW TABLE NAME;
+
+EXAMPLE:-
+	RENAME CUSTOMER TO CUSTOM;

@@ -1,0 +1,13 @@
+UPDATE TABLE:-
+	This statement is used to modify the existing data which is 	present int the table.
+
+SYNTAX:-
+
+	ALTER TABLE TABLE-NAME
+	UPDATE SET COLUMN-NAME=VALUE
+	WHERE FILTER COLUMN-NAME=VALUE;
+
+EXAMPLE:-
+	ALTER TABLE CUSTOMER
+	UPDATE SET CNAME='RAHUL'
+	WHERE CID=1;

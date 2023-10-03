@@ -1,0 +1,17 @@
+SELECT TABLE:-
+	SELECT is used to select the table or particular column record.
+
+SYNTAX:-
+	SELECT *(select all) FROM TABLE-NAME;
+
+	SELECT COLUMN-NAME FROM TABLE-NAME;
+	
+
+EXAMPLE:-
+
+	SELECT * FROM CUSTOMER;
+	This query is used to display entire table record from customer table.
+
+	SELECT CNAME FROM CUSTOMER;
+	This query is used to display column based record from the customer table.
+		 

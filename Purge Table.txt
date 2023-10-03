@@ -1,0 +1,8 @@
+PURGE TABLE:-
+	This statement is used to remove table from recyclebin permantely.
+
+SYNTAX:-
+	PURGE TABLE TABLE-NAME;
+
+EXAMPLE:-
+	PURGE TABLE CUSTOMER;

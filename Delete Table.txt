@@ -1,0 +1,11 @@
+DELETE TABLE:-
+	This statement is used to delete a particular record from the table.
+
+SYNTAX:-
+
+	DELETE FROM TABLE-NAME
+	WHERE FILTER COLUMN-NAME=VALUE;
+
+EXAMPLE:-
+	DELETE FROM CUSTOMER
+	WHERE CID=3;

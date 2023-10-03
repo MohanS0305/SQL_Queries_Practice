@@ -1,0 +1,10 @@
+DROP TABLE:-
+	This statement is used to delete the entire records from table including the table structure as well deleted table restore or retrive is possible here.
+
+SYNTAX:-
+
+	DROP TABLE TABLE_NAME;
+
+EXAMPLE:-
+
+	DROP TABLE CUSTOMER;
